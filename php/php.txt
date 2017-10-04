@@ -1,2 +1,0 @@
-This is is the first touch in the Docker container.
-I want to push this txt file to the git repository.
