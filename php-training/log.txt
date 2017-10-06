@@ -1,0 +1,54 @@
+[Oct. 2]
+
+- 学習書籍2冊 from @tnaototo
+  - リーダブルコード
+  - 独習PHP
+- リーダブルコード読了(やや飛ばし読み)
+- Docker for Mac で環境構築
+
+[Oct. 3]
+
+できたこと
+- Dockerコマンドを学習
+  - イメージpull、コンテナrunなどはできる
+- GitHubにレポジトリを作成
+　　https://github.com/Nariaki-Sato/php
+
+できていないこと
+- Dockerの概念理解
+  - まだよくわかっていない、VMとは別物であることは理解
+  - VMよりこちらを使えた方が圧倒的にいいことは理解
+  - Dockerの運用には、PHPとは別にDockeｒの学習が必要
+
+ 対応策
+   - PHP学習とDocker学習を一時的に(今だけ)切り離す
+
+[Oct. 4]
+
+結論: DockerからポートフォワードしてるのにChrome(OSX)のLocalhostはMac用のRackサーバPowのまま
+質問: 
+  - 1. DockerHubのイメージphp-Apacheを直接pullするとOSは何? (指定はCentOS or Ubuntu)
+  - 2. -pオプションでフォワードする = OSXのChromeで動作確認できる は理解ミス?
+  - 3. docker pullすべきイメージはcentos? php-apache?
+    - centosをpullすると, そのCentOSにインストールするphp, apacheはyumコマンド使う(dockerは?)
+
+- 開発環境
+  - MaxOSXにDocker for Mac
+
+- I. DockerにLAMP環境構築(php-ApacheをPull)
+  - https://qiita.com/furu8ma/items/5d0c35c29e53429e4f10
+    - ポートフォワード(-p 80:80)してもOSXのChromeに繋がらない
+  - https://qiita.com/kurkuru/items/fa7401a01c4d5dd98e4a
+    - ポートフォワード(-p 80:80)してもOSXのChromeに繋がらない
+
+  -------(IとIIは完全に別のイメージ、コンテナ)
+
+- II. DockerにCentOSを入れてもう一度構築(centosをpull)
+  - https://qiita.com/prgseek/items/fd368402b90beb83683a
+    - -vオプションでホスト(OSX)の共有ディレクトリをマウントできた
+    - OSXのテキストエディタ(Sublime Text)でコード編集可能になった
+  - CentOSにphp, Apacheを入れた(yumでインストール)
+    - ポートフォワード(-p 80:80)してもOSXのChromeに繋がらない
+
+対応策
+  - 理解が追いつくまで調べる
