@@ -1,1 +1,0 @@
-This repository is the training in advance for Sato.
