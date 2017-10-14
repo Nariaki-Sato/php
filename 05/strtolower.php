@@ -1,10 +1,10 @@
 <?php
-echo 'WINGSプロジェクト'.'<br />';
-
-echo "=================<br/>";
-
-print strtolower('WINGSプロジェクト').'<br />';
-print strtoupper('wingsプロジェクト').'<br />';
-print lcfirst('WINGS PROJECT').'<br />';
-print ucfirst('wings project').'<br />';
-print ucwords('wings project').'<br />';
+print strtolower('WINGSプロジェクト');
+print '<br />';
+print strtoupper('wingsプロジェクト');
+print '<br />';
+print lcfirst('WINGS PROJECT');
+print '<br />';
+print ucfirst('wings project');
+print '<br />';
+print ucwords('wings project');

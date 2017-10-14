@@ -12,8 +12,6 @@
 </tr>
 <?php
 $file = fopen('access.log', 'rb');
-
-//LOCK_SHは共有ロック: 読み込み中なので他者による書き込みを中止する
 flock($file, LOCK_SH);
 while ($line = fgetcsv($file, 1024, "\t")) {
 // while ($fline = fgets($file, 1024)) {
@@ -24,8 +22,6 @@ while ($line = fgetcsv($file, 1024, "\t")) {
   }
   print '</tr>';
 }
-
-//ファイルクローズの前にアンロックする
 flock($file, LOCK_UN);
 fclose($file);
 ?>

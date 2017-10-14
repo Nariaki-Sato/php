@@ -1,5 +1,5 @@
 <?php
-$rank = '乙';
+$rank = '甲';
 if ($rank == '甲') {
   print '大変良いです。';
 } elseif ($rank == '乙') {
